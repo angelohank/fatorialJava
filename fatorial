@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Fatorial {
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+        int fatorial = entrada.nextInt();
+        long auxiliar = fatorial;
+
+        while(fatorial > 1){
+            auxiliar = auxiliar*(fatorial-1);
+            fatorial--;
+            System.out.println(auxiliar);
+        }
+
+    }
+}
