@@ -1,19 +1,21 @@
+import javax.swing.*;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 public class Fatorial {
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
+        int a = 0;
 
-        System.out.println("Insira o numero que deseja calcular o fatorial:");
+        String entrada = JOptionPane.showInputDialog("Digite o numero que deseja calcular o fatorial:");
 
-        int fatorial = entrada.nextInt();
-        int inicial = fatorial;
+        long fatorial = Integer.parseInt(entrada.toString());
         long auxiliar = fatorial;
 
         while(fatorial > 1){
             auxiliar = auxiliar*(fatorial-1);
             fatorial--;
+            System.out.println(auxiliar);
         }
-        System.out.println("O fatorial de " + inicial + " eh: " + auxiliar);
+        JOptionPane.showMessageDialog(null,"O fatorial de " + entrada + " é " + auxiliar);
     }
 }
